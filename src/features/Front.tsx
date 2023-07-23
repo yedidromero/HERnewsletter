@@ -223,140 +223,170 @@ export default function Front() {
               Protect your data
             </Typography>
 
-            <TextField
-              fullWidth
-              id="name"
-              label="Name"
-              variant="outlined"
-              value={name}
-              onChange={handleNameChange}
-              sx={{ mt: 3 }}
-            />
-
-            <TextField
-              required
-              fullWidth
-              id="email"
-              label="Email"
-              variant="outlined"
-              sx={{ mt: 3 }}
-              value={email}
-              onChange={handleEmailChange}
-              type="email"
-              error={!isValidEmail}
-              helperText={!isValidEmail && 'Please enter a valid email address'}
-            />
-
-            {/* Select para la ocupación */}
-            <Select
-              fullWidth
-              id="occupation"
-              value={occupation}
-              onChange={handleOccupationChange}
-              label="Occupation"
-              variant="outlined"
-              sx={{ mt: 3 }}
-              defaultValue=""
-            >
-              <MenuItem value="" disabled>
-                Occupation
-              </MenuItem>
-              <MenuItem value="I'm working full time">I'm working full time</MenuItem>
-              <MenuItem value="I'm working part-time">I'm working part-time</MenuItem>
-              <MenuItem value="Student">Student</MenuItem>
-              <MenuItem value="Freelance">Freelance</MenuItem>
-            </Select>
-
-            {/* Select para Categories */}
-            <Select
-              fullWidth
-              id="category"
-              value={category}
-              onChange={handleCategoryChange}
-              label="Categories"
-              variant="outlined"
-              sx={{ mt: 3 }}
-              defaultValue=""
-            >
-              <MenuItem value="" disabled>
-                Categories
-              </MenuItem>
-              <MenuItem value="Development">Development</MenuItem>
-              <MenuItem value="Finance">Finance</MenuItem>
-              <MenuItem value="Marketing">Marketing</MenuItem>
-              <MenuItem value="Human Talent">Human Talent</MenuItem>
-              <MenuItem value="PMP">PMP</MenuItem>
-              <MenuItem value="Founder">Founder</MenuItem>
-              <MenuItem value="Invest">Invest</MenuItem>
-              <MenuItem value="Infrastructure">Infrastructure</MenuItem>
-              <MenuItem value="Legal">Legal</MenuItem>
-            </Select>
-
-            {/* Select para Searching for */}
-            <Select
-              fullWidth
-              id="searchingFor"
-              value={searchingFor}
-              onChange={handleSearchingForChange}
-              label="Searching for"
-              variant="outlined"
-              sx={{ mt: 3 }}
-              defaultValue=""
-            >
-              <MenuItem value="" disabled>
-                Searching for
-              </MenuItem>
-              <MenuItem value="Empleo a tiempo completo">Empleo a tiempo completo</MenuItem>
-              <MenuItem value="Empleo part-time">Empleo part-time</MenuItem>
-              <MenuItem value="Freelance">Freelance</MenuItem>
-              <MenuItem value="Founder">Founder</MenuItem>
-              <MenuItem value="Not looking">Not looking</MenuItem>
-            </Select>
-
-            {/* Select para Region */}
-            <Select
-              fullWidth
-              id="region"
-              value={region}
-              onChange={handleRegionChange}
-              label="Region"
-              variant="outlined"
-              sx={{ mt: 3 }}
-              defaultValue=""
-            >
-              <MenuItem value="" disabled>
-                Region
-              </MenuItem>
-              <MenuItem value="Latam">Latam</MenuItem>
-              <MenuItem value="Norteamérica">Norteamérica</MenuItem>
-              <MenuItem value="Europa">Europa</MenuItem>
-              <MenuItem value="Asia">Asia</MenuItem>
-              <MenuItem value="Australia">Australia</MenuItem>
-              <MenuItem value="West-Africa">West-Africa</MenuItem>
-              <MenuItem value="East-Africa">East-Africa</MenuItem>
-            </Select>
-
-            {/* Select para Age */}
-            <Select
-              fullWidth
-              id="age"
-              value={age}
-              onChange={handleAgeChange}
-              label="Age"
-              variant="outlined"
-              sx={{ mt: 3 }}
-              defaultValue=""
-            >
-              <MenuItem value="" disabled>
-                Age
-              </MenuItem>
-              <MenuItem value="&lt;18">&lt;18</MenuItem>
-              <MenuItem value="18-25">18-25</MenuItem>
-              <MenuItem value="26-35">26-35</MenuItem>
-              <MenuItem value="36-45">36-45</MenuItem>
-              <MenuItem value="46-53">46-53</MenuItem>
-              <MenuItem value="&gt;53">&gt;53</MenuItem>
-            </Select>
+            <div>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td  className="second-column">
+              <TextField
+                fullWidth
+                id="name"
+                label=""
+                variant="outlined"
+                value={name}
+                onChange={handleNameChange}
+                sx={{ mt: 3 }}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>
+              <TextField
+                required
+                fullWidth
+                id="email"
+                label=""
+                variant="outlined"
+                sx={{ mt: 3 }}
+                value={email}
+                onChange={handleEmailChange}
+                type="email"
+                error={!isValidEmail}
+                helperText={!isValidEmail && 'Please enter a valid email address'}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Occupation</td>
+            <td>
+              <Select
+                fullWidth
+                id="occupation"
+                value={occupation}
+                onChange={handleOccupationChange}
+                label="Occupation"
+                variant="outlined"
+                sx={{ mt: 3 }}
+                defaultValue=""
+              >
+                <MenuItem value="" disabled>
+                  Occupation
+                </MenuItem>
+                <MenuItem value="I'm working full time">I'm working full time</MenuItem>
+                <MenuItem value="I'm working part-time">I'm working part-time</MenuItem>
+                <MenuItem value="Student">Student</MenuItem>
+                <MenuItem value="Freelance">Freelance</MenuItem>
+              </Select>
+            </td>
+          </tr>
+          <tr>
+            <td>Categories</td>
+            <td>
+              <Select
+                fullWidth
+                id="category"
+                value={category}
+                onChange={handleCategoryChange}
+                label="Categories"
+                variant="outlined"
+                sx={{ mt: 3 }}
+                defaultValue=""
+              >
+                <MenuItem value="" disabled>
+                  Categories
+                </MenuItem>
+                <MenuItem value="Development">Development</MenuItem>
+                <MenuItem value="Finance">Finance</MenuItem>
+                <MenuItem value="Marketing">Marketing</MenuItem>
+                <MenuItem value="Human Talent">Human Talent</MenuItem>
+                <MenuItem value="PMP">PMP</MenuItem>
+                <MenuItem value="Founder">Founder</MenuItem>
+                <MenuItem value="Invest">Invest</MenuItem>
+                <MenuItem value="Infrastructure">Infrastructure</MenuItem>
+                <MenuItem value="Legal">Legal</MenuItem>
+              </Select>
+            </td>
+          </tr>
+          <tr>
+            <td>Searching for</td>
+            <td>
+              <Select
+                fullWidth
+                id="searchingFor"
+                value={searchingFor}
+                onChange={handleSearchingForChange}
+                label="Searching for"
+                variant="outlined"
+                sx={{ mt: 3 }}
+                defaultValue=""
+              >
+                <MenuItem value="" disabled>
+                  Searching for
+                </MenuItem>
+                <MenuItem value="Empleo a tiempo completo">Empleo a tiempo completo</MenuItem>
+                <MenuItem value="Empleo part-time">Empleo part-time</MenuItem>
+                <MenuItem value="Freelance">Freelance</MenuItem>
+                <MenuItem value="Founder">Founder</MenuItem>
+                <MenuItem value="Not looking">Not looking</MenuItem>
+              </Select>
+            </td>
+          </tr>
+          <tr>
+            <td>Region</td>
+            <td>
+              <Select
+                fullWidth
+                id="region"
+                value={region}
+                onChange={handleRegionChange}
+                label="Region"
+                variant="outlined"
+                sx={{ mt: 3 }}
+                defaultValue=""
+              >
+                <MenuItem value="" disabled>
+                  Region
+                </MenuItem>
+                <MenuItem value="Latam">Latam</MenuItem>
+                <MenuItem value="Norteamérica">Norteamérica</MenuItem>
+                <MenuItem value="Europa">Europa</MenuItem>
+                <MenuItem value="Asia">Asia</MenuItem>
+                <MenuItem value="Australia">Australia</MenuItem>
+                <MenuItem value="West-Africa">West-Africa</MenuItem>
+                <MenuItem value="East-Africa">East-Africa</MenuItem>
+              </Select>
+            </td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>
+              <Select
+                fullWidth
+                id="age"
+                value={age}
+                onChange={handleAgeChange}
+                label="Age"
+                variant="outlined"
+                sx={{ mt: 3 }}
+                defaultValue=""
+              >
+                <MenuItem value="" disabled>
+                  Age
+                </MenuItem>
+                <MenuItem value="&lt;18">&lt;18</MenuItem>
+                <MenuItem value="18-25">18-25</MenuItem>
+                <MenuItem value="26-35">26-35</MenuItem>
+                <MenuItem value="36-45">36-45</MenuItem>
+                <MenuItem value="46-53">46-53</MenuItem>
+                <MenuItem value="&gt;53">&gt;53</MenuItem>
+              </Select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
 
 
