@@ -17,3 +17,11 @@ Next: Development the NFTs metadata for filter the audience for dApp.
 - Receiver pool categorization
 
 Them, the user to win by shared data with protocolos (DeFi, DAOs for participate in governance, social media on web3 for content creation. The newsletter earns a percentage for the storage and safe of user data, and the protocol to win when receiving classified information that will be used for professional purposes.
+
+INSTALL
+
+To store user data, we have used Yarn. The variables we have added include categories, age, region, interests, in addition to the email and wallet required to link the data.
+
+Regarding the email tool, we used NPM to check the list of users whose data we have stored.
+
+Web3mail is directly utilized within the platform and will be the email service designed monthly to be sent through the platform developed by IEXEC, where users' email data is protected, and they will receive our newsletter.
