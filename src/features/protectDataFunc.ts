@@ -2,7 +2,15 @@ import { getAccount } from '@wagmi/core';
 import { IExecDataProtector, DataSchema } from '@iexec/dataprotector';
 
 //protect data by calling protectData method from @iexec/dataprotector
-const protectDataFunc = async (data: DataSchema, name: string) => {
+const protectDataFunc = async (
+  data: DataSchema,
+  name: string,
+  occupation: string,
+  age: string,
+  category: string,
+  searchingFor: string,
+  region: string
+) => {
   const result = getAccount();
   const provider = await result.connector?.getProvider();
 
@@ -12,6 +20,11 @@ const protectDataFunc = async (data: DataSchema, name: string) => {
   const { address } = await dataProtector.protectData({
     data,
     name,
+    occupation,
+    age,
+    category,
+    searchingFor,
+    region,
   });
   return address;
 };
