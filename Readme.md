@@ -33,4 +33,4 @@ Regarding the email tool, we used NPM to check the list of users whose data we h
 
 Web3mail is directly utilized within the platform and will be the email service designed monthly to be sent through the platform developed by IEXEC, where users' email data is protected, and they will receive our newsletter.
 
-
+DRIVE: https://drive.google.com/file/d/1UkLsvvKhKmAV0tXJ3E1RNPTBZ2ES6mki/view?usp=sharing 
