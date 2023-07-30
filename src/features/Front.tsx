@@ -92,8 +92,8 @@ const SideMenu = () => {
         {/* Logo en la parte inferior */}
         <List>
           <ListItem button component={RouterLink} to="/recordeddata">
-            <img src="https://twitter.com/herdaolatam/photo" alt="Logo" style={{ width: '16px', height: '16px', marginRight: '8px' }} />
-            <ListItemText primary="Logo" />
+            <img src="https://substackcdn.com/image/fetch/w_224,h_224,c_fill,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda95c68e-65aa-496d-bc5d-605dafe241b9_4168x4168.jpeg" alt="Logo" style={{ width: '100px', height: '100px', marginRight: '8px' }} />
+            <ListItemText primary="" />
           </ListItem>
         </List>
       </div>
