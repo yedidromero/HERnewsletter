@@ -268,7 +268,7 @@ export default function Front() {
               >
                 {shortAddress(address as string)}
               </Typography>
-              <Button sx={{ display: 'block', margin: '20px auto', bgcolor: '#007AFF', color: 'white'  }} variant="contained" onClick={() => disconnect()}>
+              <Button variant="contained" onClick={() => disconnect()}>
                 Disconnect
               </Button>
             </Toolbar>
@@ -278,7 +278,7 @@ export default function Front() {
           <SideMenu />
 
           {/* First Box to create a Protected Data */}
-          <Typography component="h1" variant="h5" color="secondary" sx={{ mt: 3 , fontSize: '1.4rem',fontWeight: '500' }}  style={{ margin: '0px 0px 0px 40px',}}>
+          <Typography component="h1" variant="h5" sx={{ mt: 3 }}  style={{ margin: '0px 0px 0px 40px',}}>
               Protect your data
             </Typography>
           <Box id="form-box">
@@ -459,7 +459,7 @@ export default function Front() {
             )}
             {!loadingProtect && (
               <Button
-                sx={{ display: 'block', margin: '20px auto', bgcolor: '#007AFF', color: 'white'  }}
+                sx={{ display: 'block', margin: '20px auto' }}
                 onClick={protectedDataSubmit}
                 variant="contained"
               >
