@@ -61,3 +61,33 @@
 .MuiBox-root .css-1kuevwo{
   width: 100% !important;
 }
+#newsletter{
+  background:#EDEDF8 ;
+  border-radius: 30px;
+}
+
+#btn-color-newsletter{
+  border-radius: 20px;
+  text-transform: inherit;
+  font-weight: bold;
+  color:white;
+  background: #737373;
+}
+
+#btn-color-newsletter:hover{
+  color: white !important;
+  background: #EC83BD!important;
+}
+.Typography{
+  margin: 6px;
+}
+#newsletter2{
+  margin: inherit !important;
+}
+
+#entries{
+  background:#EDEDF8 ;
+  border-radius: 30px;
+  color: #DA077C;
+  font-weight: bold;
+}
