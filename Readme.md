@@ -1,5 +1,5 @@
 # dataprotector-sandbox-main
- dataprotector-sandbox-main
+
 Project name: HERNEWS
 
 Brief description: The purpose of HERNEWS is to gather data from our newsletter subscribers. The next step involves creating the newsletter on our own platform and transitioning away from Substack, thereby collecting data from new subscribers. We will use the iExec platform for the monthly newsletter distribution. In the medium term, our goal is to implement all the options showcased in the demo to initiate monetization efforts.
