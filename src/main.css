@@ -20,3 +20,44 @@
   height: 2em !important;
   padding: 0px;
 }
+#titulo{
+  font-weight: 600;
+  color: #DA077C;
+}
+
+#btn-color{
+  width: 46% !important;
+  border-radius: 20px;
+  text-transform: inherit;
+  font-weight: bold;
+}
+
+#btn-color:hover{
+    color: white !important;
+    background: #EC83BD!important;
+    
+}
+
+#btn-color-wallet{
+  border-radius: 20px;
+  color: #DA077C !important;
+    background: #DBDBEF!important;
+    text-transform: inherit;
+    font-weight: bold;
+}
+
+#btn-color-wallet:hover{
+  border-radius: 20px;
+  color: white !important;
+    background: #EC83BD!important;
+}
+
+#colortitulo{
+  color: #DA077C !important;
+  font-family: sans-serif;
+  margin-left: 48%;
+}
+
+.MuiBox-root .css-1kuevwo{
+  width: 100% !important;
+}
