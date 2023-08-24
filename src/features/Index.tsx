@@ -30,44 +30,44 @@ import { IEXEC_EXPLORER_URL } from '../utils/config';
 import { DataSchema, GrantedAccess } from '@iexec/dataprotector';
 
 const Index = () => {
-//web3mail dapp END
-const WEB3MAIL_APP_ENS = 'web3mail.apps.iexec.eth';
-//connection with wallet
-const { address, isConnected } = useAccount();
-const { disconnect } = useDisconnect();
+    //web3mail dapp END
+    const WEB3MAIL_APP_ENS = 'web3mail.apps.iexec.eth';
+    //connection with wallet
+    const { address, isConnected } = useAccount();
+    const { disconnect } = useDisconnect();
 
-//loading effect & error
-const [loadingProtect, setLoadingProtect] = useState(false);
-const [errorProtect, setErrorProtect] = useState('');
-const [loadingGrant, setLoadingGrant] = useState(false);
-const [errorGrant, setErrorGrant] = useState('');
-const [loadingRevoke, setLoadingRevoke] = useState(false);
-const [errorRevoke, setErrorRevoke] = useState('');
+    //loading effect & error
+    const [loadingProtect, setLoadingProtect] = useState(false);
+    const [errorProtect, setErrorProtect] = useState('');
+    const [loadingGrant, setLoadingGrant] = useState(false);
+    const [errorGrant, setErrorGrant] = useState('');
+    const [loadingRevoke, setLoadingRevoke] = useState(false);
+    const [errorRevoke, setErrorRevoke] = useState('');
 
-//global state
-const [protectedData, setProtectedData] = useState('');
-const [grantAccess, setGrantAccess] = useState<GrantedAccess>();
-const [revokeAccess, setRevokeAccess] = useState('');
+    //global state
+    const [protectedData, setProtectedData] = useState('');
+    const [grantAccess, setGrantAccess] = useState<GrantedAccess>();
+    const [revokeAccess, setRevokeAccess] = useState('');
 
-//set name
-const [name, setName] = useState('');
+    //set name
+    const [name, setName] = useState('');
 
-//set email
-const [email, setEmail] = useState('');
-const [isValidEmail, setIsValidEmail] = useState(true);
+    //set email
+    const [email, setEmail] = useState('');
+    const [isValidEmail, setIsValidEmail] = useState(true);
 
-//set access number
-const [accessNumber, setAccessNumber] = useState<number>(1);
+    //set access number
+    const [accessNumber, setAccessNumber] = useState<number>(1);
 
-//set user restricted address
-const [authorizedUser, setAuthorizedUser] = useState('');
+    //set user restricted address
+    const [authorizedUser, setAuthorizedUser] = useState('');
 
-// Occupation, Categories, Searching for, Region, and Age state variables
-const [occupation, setOccupation] = useState('');
-const [category, setCategory] = useState('');
-const [searchingFor, setSearchingFor] = useState('');
-const [region, setRegion] = useState('');
-const [age, setAge] = useState('');
+    // Occupation, Categories, Searching for, Region, and Age state variables
+    const [occupation, setOccupation] = useState('');
+    const [category, setCategory] = useState('');
+    const [searchingFor, setSearchingFor] = useState('');
+    const [region, setRegion] = useState('');
+    const [age, setAge] = useState('');
 
 //handle functions
 // ... (omitiendo la parte que ya has proporcionado)

@@ -135,7 +135,12 @@ export default function Front() {
   //set user restricted address
   const [authorizedUser, setAuthorizedUser] = useState('');
 
-
+  // Occupation, Categories, Searching for, Region, and Age state variables
+  const [occupation, setOccupation] = useState('');
+  const [category, setCategory] = useState('');
+  const [searchingFor, setSearchingFor] = useState('');
+  const [region, setRegion] = useState('');
+  const [age, setAge] = useState('');
 
   //handle functions
   const handleEmailChange = (event: any) => {
@@ -159,7 +164,26 @@ export default function Front() {
     setAuthorizedUser(event.target.value);
   };
 
- 
+  const handleOccupationChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setOccupation(event.target.value as string);
+  };
+
+  const handleCategoryChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setCategory(event.target.value as string);
+  };
+
+  const handleSearchingForChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setSearchingFor(event.target.value as string);
+  };
+
+  const handleRegionChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setRegion(event.target.value as string);
+  };
+
+  const handleAgeChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setAge(event.target.value as string);
+  };
+
   //wallet address shortening
   const shortAddress = (address: string) => {
     return address.slice(0, 6) + '...' + address.slice(-4);
@@ -245,7 +269,7 @@ export default function Front() {
               >
                 {shortAddress(address as string)}
               </Typography>
-              <Button id="btn-color-wallet" variant="contained" onClick={() => disconnect()}>
+              <Button sx={{ display: 'block', margin: '20px auto', bgcolor: '#007AFF', color: 'white'  }} variant="contained" onClick={() => disconnect()}>
                 Disconnect
               </Button>
             </Toolbar>
@@ -254,61 +278,170 @@ export default function Front() {
           {/* Side menu */}
           <SideMenu />
 
-         {/* Sección para datos */}
+          {/* First Box to create a Protected Data */}
+          <Typography component="h1" variant="h5" color="secondary" sx={{ mt: 3 , fontSize: '1.4rem',fontWeight: '500' }}  style={{ margin: '0px 0px 0px 40px',}}>
+              Subscribe to H.E.R. news
+            </Typography>
+          <Box id="form-box">
+            
+
+            <div style={{ margin: '27px',}}>
+
+    </div>
 
 
-      {/* Nueva sección con 3 columnas */}
-      <div id='newsletter' style={{ display: 'flex', justifyContent: 'space-between', margin: '20px 70px' }}>
-        <div id='newsletter2' style={{ flex: 1, marginRight: '20px' }}>
-          <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>Subscribe to H.E.R. news</Typography>
-          <Typography variant="body2" sx={{ fontSize: '1rem',fontWeight: '400',color: '#737373',fontFamily: 'sans-serif' }}>Receive new entries directly to your inbox</Typography>
-        </div>
-        <div style={{ flex: 1, marginRight: '20px' }}>
-          
-        </div>
-        <div id='newsletter2' >
-          <Button id="btn-color-newsletter" component={RouterLink} to="/formulario" variant="contained" color="primary">
-            Subscribe
-          </Button>
-        </div>
-      </div>
-      {/* seccion entries */}
-      <div  id='entries' style={{ display: 'flex', justifyContent: 'space-between', margin: '20px 70px' }}>
-        <div style={{ flex: 1, marginRight: '20px',textAlign: 'center' }}>
-          <Typography  style={{ margin: '4px', fontWeight: '500' }} variant="body1">Entries</Typography> 
-        </div>
-       </div>           
-       {/* imagen1 */}
-       <div   style={{ display: 'flex', justifyContent: 'space-between', margin: '20px 40px' }}>
-        <div style={{ flex: 1, marginRight: '20px',textAlign: 'center' }}>
-        <a href="https://h3rnewsletter.substack.com/" target="_blank">
-      
-        <img
-          src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F12d8879d-38f6-4328-b35e-817c7c1a9f67_1280x640.jpeg"
-          alt="index"
-          style={{ width: '47%', height: 'auto', marginRight: '8px' }}
-          className="mr-auto"
-        />
-        </a>
-        </div>
-       </div> 
-        {/* imagen2 */}
-        <div   style={{ display: 'flex', justifyContent: 'space-between', margin: '20px 40px' }}>
-        <div style={{ flex: 1, marginRight: '20px',textAlign: 'center' }}>
-        <a href="https://h3rnewsletter.substack.com/" target="_blank">
-      
-        <img
-          src="http://desarrollo-de-sitios-web.com/img/news.jpg"
-          alt="index"
-          style={{ width: '30%', height: 'auto', marginRight: '8px',marginTop:'-14px' }}
-          className="mr-auto"
-        />
-        </a>
-        </div>
-       </div> 
 
+            {errorProtect && (
+              <Alert sx={{ mt: 3, mb: 2 }} severity="error">
+                <Typography variant="h6"> Creation failed </Typography>
+                {errorProtect}
+              </Alert>
+            )}
+            {!loadingProtect && (
+              <Button
+                sx={{ display: 'block', margin: '20px auto', bgcolor: '#007AFF', color: 'white'  }}
+                onClick={protectedDataSubmit}
+                variant="contained"
+              >
+                Create
+              </Button>
+            )}
+            {protectedData && !errorProtect && (
+              <Alert sx={{ mt: 3, mb: 2 }} severity="success">
+                <Typography variant="h6">
+                  Your data has been protected!
+                </Typography>
+                <Link
+                  href={IEXEC_EXPLORER_URL + protectedData}
+                  target="_blank"
+                  sx={{ color: 'green', textDecorationColor: 'green' }}
+                >
+                  You can reach it here
+                </Link>
+                <p>Your protected data address: {protectedData}</p>
+              </Alert>
+            )}
+            {loadingProtect && (
+              <CircularProgress
+                sx={{ display: 'block', margin: '20px auto' }}
+              ></CircularProgress>
+            )}
+          </Box>
 
-    </>
+          {/* Second Box to grant access to a Protected Data */}
+          {protectedData && (
+            <Box id="form-box">
+              <Typography component="h1" variant="h5" sx={{ mt: 3 }}>
+                Grant Access for your protected data
+              </Typography>
+              <TextField
+                required
+                fullWidth
+                label="Data Address"
+                variant="outlined"
+                sx={{ mt: 3 }}
+                value={protectedData}
+                onChange={handleProtectedDataChange}
+                type="text"
+              />
+              <TextField
+                fullWidth
+                type="number"
+                id="age"
+                label="Access Number"
+                variant="outlined"
+                value={accessNumber}
+                InputProps={{ inputProps: { min: 1 } }}
+                onChange={handleAccessNumberChange}
+                sx={{ mt: 3 }}
+              />
+              <TextField
+                fullWidth
+                id="authorizedUser"
+                label="User Address Restricted"
+                variant="outlined"
+                sx={{ mt: 3 }}
+                value={authorizedUser}
+                onChange={authorizedUserChange}
+                type="text"
+              />
+              {!loadingGrant && (
+                <Button
+                  id="spacingStyle"
+                  onClick={grantAccessSubmit}
+                  variant="contained"
+                >
+                  Grant Access
+                </Button>
+              )}
+              {errorGrant && (
+                <Alert sx={{ mt: 3, mb: 2 }} severity="error">
+                  <Typography variant="h6"> Grant Access failed </Typography>
+                  {errorGrant}
+                </Alert>
+              )}
+              {grantAccess && !errorGrant && (
+                <>
+                  <Alert sx={{ mt: 3, mb: 2 }} severity="success">
+                    <Typography variant="h6">
+                      Your access has been granted !
+                    </Typography>
+                  </Alert>
+                </>
+              )}
+              {loadingGrant && (
+                <CircularProgress id="spacingStyle"></CircularProgress>
+              )}
+            </Box>
+          )}
+
+          {/* Third Box to revoke the access given to a Protected Data*/}
+          {grantAccess && (
+            <Box id="form-box">
+              <Typography component="h1" variant="h5" sx={{ mt: 3 }}>
+                Revoke Access For Your data
+              </Typography>
+              <TextField
+                required
+                fullWidth
+                id="dataorderAddresssetAddress"
+                label="Data Address"
+                variant="outlined"
+                sx={{ mt: 3 }}
+                value={protectedData}
+                onChange={handleProtectedDataChange}
+                type="text"
+              />
+              {!loadingRevoke && (
+                <Button
+                  id="spacingStyle"
+                  onClick={revokeAccessSubmit}
+                  variant="contained"
+                >
+                  Revoke Access
+                </Button>
+              )}
+              {loadingRevoke && (
+                <CircularProgress id="spacingStyle"></CircularProgress>
+              )}
+              {revokeAccess && !errorRevoke && (
+                <>
+                  <Alert sx={{ mt: 3, mb: 2 }} severity="success">
+                    <Typography variant="h6">
+                      You have successfully revoked access!
+                    </Typography>
+                  </Alert>
+                </>
+              )}
+              {errorRevoke && (
+                <Alert sx={{ mt: 3, mb: 2 }} severity="error">
+                  <Typography variant="h6"> Revoke Access failed </Typography>
+                  {errorRevoke}
+                </Alert>
+              )}
+            </Box>
+          )}
+        </>
       ) : (
         <Connect />
       )}

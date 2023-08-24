@@ -1,7 +1,7 @@
 #form-box {
-  width: 500px;
+  width: 400px;
   margin: auto;
-  background: lavender;
+  background: #F5EAFC;
   border-radius: 11px;
 }
 
@@ -90,4 +90,39 @@
   border-radius: 30px;
   color: #DA077C;
   font-weight: bold;
+}
+
+.css-e6h0mb-MuiCircularProgress-root,.css-176wh8e-MuiCircularProgress-circle {
+  
+  color: #fc5aac;}
+
+  #btn-color-wallet2{
+    border-radius: 20px;
+    color: #DBDBEF!important; 
+      background: #da077bb3 !important;
+      text-transform: inherit;
+      font-weight: bold;
+  }
+  
+  #btn-color-wallet2:hover{
+    color: #DA077C !important;
+      background: #DBDBEF!important;
+      text-transform: inherit;
+      font-weight: bold;
+  }
+  .css-15y69v2-MuiPaper-root-MuiAlert-root .MuiAlert-icon {
+    color: #DA077C;
+}
+
+#colortitulo2{
+  color: #DA077C !important;
+  font-family: sans-serif;
+  margin-left: 28%;
+}
+
+#head6{
+  color: #737373 !important;
+  font-family: sans-serif;
+  font-size: larger;
+  
 }

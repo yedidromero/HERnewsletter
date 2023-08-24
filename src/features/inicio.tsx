@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import {
   TextField,
@@ -147,11 +148,11 @@ return (
           </Typography>
           {/* Botones */}
           <Box mt={2} display="flex" justifyContent="space-between" width="76%">
-            <Button variant="contained" id="btn-color" component={RouterLink} to="Front" sx={{ bgcolor: '#DBDBEF', borderRadius: '20px',color: '#DA077C' }}>
+            <Button variant="contained" id="btn-color" component={RouterLink} to="formulario" sx={{ bgcolor: '#DBDBEF', borderRadius: '20px',color: '#DA077C' }}>
               Get Started
             </Button>
-            <Button variant="contained" id="btn-color" component={RouterLink} to="/pagina-generica" sx={{ bgcolor: '#DBDBEF', borderRadius: '20px',color: '#DA077C' }}>
-              Learn Mores
+            <Button variant="contained" id="btn-color" component={RouterLink} to="/newsletter" sx={{ bgcolor: '#DBDBEF', borderRadius: '20px',color: '#DA077C' }}>
+              Learn More
             </Button>
           </Box>
         </Grid>

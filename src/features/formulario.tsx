@@ -91,7 +91,7 @@ const SideMenu = () => {
 
         {/* Logo en la parte inferior */}
         <List>
-          <ListItem button component={RouterLink} to="/recordeddata">
+          <ListItem button component={RouterLink} to="/">
             <img src="https://substackcdn.com/image/fetch/w_224,h_224,c_fill,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda95c68e-65aa-496d-bc5d-605dafe241b9_4168x4168.jpeg" alt="Logo" style={{ width: '100px', height: '100px', marginRight: '8px' }} />
             <ListItemText primary="" />
           </ListItem>
@@ -268,7 +268,7 @@ export default function Front() {
               >
                 {shortAddress(address as string)}
               </Typography>
-              <Button sx={{ display: 'block', margin: '20px auto', bgcolor: '#007AFF', color: 'white'  }} variant="contained" onClick={() => disconnect()}>
+              <Button id="btn-color-wallet"  variant="contained" onClick={() => disconnect()}>
                 Disconnect
               </Button>
             </Toolbar>
@@ -278,14 +278,12 @@ export default function Front() {
           <SideMenu />
 
           {/* First Box to create a Protected Data */}
-          <Typography component="h1" variant="h5" color="secondary" sx={{ mt: 3 , fontSize: '1.4rem',fontWeight: '500' }}  style={{ margin: '0px 0px 0px 40px',}}>
-              Protect your data
-            </Typography>
+          <h2 id="colortitulo2" >Protect your data </h2>
           <Box id="form-box">
             
 
             <div style={{ margin: '27px',}}>
-      <table>
+      <table style={{ fontFamily: 'Arial', fontWeight: '600', color: 'gray' }}>
         <tbody>
           <tr>
             <td>Name</td>
@@ -335,9 +333,10 @@ export default function Front() {
                 <MenuItem value="" disabled>
                   Occupation
                 </MenuItem>
+                <MenuItem value="Student">Student</MenuItem>
                 <MenuItem value="I'm working full time">I'm working full time</MenuItem>
                 <MenuItem value="I'm working part-time">I'm working part-time</MenuItem>
-                <MenuItem value="Student">Student</MenuItem>
+                <MenuItem value="Founder">Founder</MenuItem>
                 <MenuItem value="Freelance">Freelance</MenuItem>
               </Select>
             </td>
@@ -386,10 +385,10 @@ export default function Front() {
                 <MenuItem value="" disabled>
                   Searching for
                 </MenuItem>
-                <MenuItem value="Empleo a tiempo completo">Empleo a tiempo completo</MenuItem>
-                <MenuItem value="Empleo part-time">Empleo part-time</MenuItem>
-                <MenuItem value="Freelance">Freelance</MenuItem>
+                <MenuItem value="Full time job">Full time job</MenuItem>
+                <MenuItem value="Part time job">Part time job</MenuItem>
                 <MenuItem value="Founder">Founder</MenuItem>
+                <MenuItem value="Freelance">Freelance</MenuItem>
                 <MenuItem value="Not looking">Not looking</MenuItem>
               </Select>
             </td>
@@ -411,7 +410,7 @@ export default function Front() {
                   Region
                 </MenuItem>
                 <MenuItem value="Latam">Latam</MenuItem>
-                <MenuItem value="Norteamérica">Norteamérica</MenuItem>
+                <MenuItem value="North America">North America</MenuItem>
                 <MenuItem value="Europa">Europa</MenuItem>
                 <MenuItem value="Asia">Asia</MenuItem>
                 <MenuItem value="Australia">Australia</MenuItem>
@@ -458,8 +457,7 @@ export default function Front() {
               </Alert>
             )}
             {!loadingProtect && (
-              <Button
-                sx={{ display: 'block', margin: '20px auto', bgcolor: '#007AFF', color: 'white'  }}
+              <Button id="btn-color-wallet2"
                 onClick={protectedDataSubmit}
                 variant="contained"
               >
@@ -467,14 +465,14 @@ export default function Front() {
               </Button>
             )}
             {protectedData && !errorProtect && (
-              <Alert sx={{ mt: 3, mb: 2 }} severity="success">
-                <Typography variant="h6">
+              <Alert sx={{ mt: 3, mb: 2, background: '#B8B8DF' }} severity="success">
+                <Typography id="head6">
                   Your data has been protected!
                 </Typography>
                 <Link
                   href={IEXEC_EXPLORER_URL + protectedData}
                   target="_blank"
-                  sx={{ color: 'green', textDecorationColor: 'green' }}
+                  sx={{ color: 'red', textDecorationColor: 'green' }}
                 >
                   You can reach it here
                 </Link>
@@ -483,7 +481,7 @@ export default function Front() {
             )}
             {loadingProtect && (
               <CircularProgress
-                sx={{ display: 'block', margin: '20px auto' }}
+                sx={{ display: 'block', margin: '20px auto',  color: 'black' }}
               ></CircularProgress>
             )}
           </Box>
@@ -526,8 +524,8 @@ export default function Front() {
                 type="text"
               />
               {!loadingGrant && (
-                <Button
-                  id="spacingStyle"
+                <Button id="btn-color-wallet2"
+                  
                   onClick={grantAccessSubmit}
                   variant="contained"
                 >
@@ -542,8 +540,8 @@ export default function Front() {
               )}
               {grantAccess && !errorGrant && (
                 <>
-                  <Alert sx={{ mt: 3, mb: 2 }} severity="success">
-                    <Typography variant="h6">
+                  <Alert sx={{ mt: 3, mb: 2, background: '#B8B8DF' }} severity="success">
+                    <Typography id="head6">
                       Your access has been granted !
                     </Typography>
                   </Alert>
@@ -574,7 +572,7 @@ export default function Front() {
               />
               {!loadingRevoke && (
                 <Button
-                  id="spacingStyle"
+                id="btn-color-wallet2"
                   onClick={revokeAccessSubmit}
                   variant="contained"
                 >

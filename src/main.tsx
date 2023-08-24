@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material';
 import {
   EthereumClient,
@@ -11,7 +11,14 @@ import { WagmiConfig, createClient, configureChains } from 'wagmi';
 import { Web3Modal } from '@web3modal/react';
 import { bellecour } from './utils/walletConnection';
 import './main.css';
-import Front from './features/Front';
+import Front from './features/inicio';
+import SubFront from './features/Front';
+import Formulario from './features/formulario';
+import Index from './features/Index';
+import PaginaGenerica from './features/pagina-generica';
+import NotFound from './features/Notfound';
+import Newsletter from './features/newsletter';
+
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement!);
@@ -50,7 +57,14 @@ root.render(
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <WagmiConfig client={wagmiClient}>
-          <Front />
+          <Routes>
+            <Route path='/' element={<Front />} />
+            <Route path='/Front' element={<SubFront/>} />
+            <Route path='/pagina-generica' element={<PaginaGenerica/>} />
+            <Route path='/formulario' element={<Formulario/>} />
+            <Route path='/newsletter' element={<Newsletter/>} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
         </WagmiConfig>
         <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
       </BrowserRouter>
