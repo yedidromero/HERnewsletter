@@ -56,6 +56,14 @@
   color: #DA077C !important;
   font-family: sans-serif;
   margin-left: 48%;
+  text-decoration: none !important; 
+}
+
+#colortituloP{
+  color: #DA077C !important;
+  font-family: sans-serif;
+  margin-left: 700%;
+  text-decoration: none !important;
 }
 
 .MuiBox-root .css-1kuevwo{
