@@ -1,38 +1,26 @@
-# dataprotector-sandbox-main
+# Project name: HER NEWS
 
-Project name: HERNEWS
+# Brief description: 
+HER NEWS is a dApp where our users can find trends, news about blockchain and web3, and monetization opportunities of their data, in a single place. The HER community is participatory, recently has a newsletter based on Substack, which only promotes reading by users on another web3 platform. Ownership is the very core of Web3. Given the recent anti-crypto moves by not only by the world lead governments, but by mainstream tech companies (read: the mailchimp case), it is imperative for DAOs and other Web3 organizations to ensure full ownership of their content, data, and resources to better serve their communities. With iExec technology we made it possible.
 
-Brief description: The purpose of HERNEWS is to gather data from our newsletter subscribers. The next step involves creating the newsletter on our own platform and transitioning away from Substack, thereby collecting data from new subscribers. We will use the iExec platform for the monthly newsletter distribution. In the medium term, our goal is to implement all the options showcased in the demo to initiate monetization efforts.
+# What technology do we use?
+1. Users pool categorization: According users data: occupations, categories, searching, region, age.
+2. Data protector: Encryption of name´s users and their emails.
+3. Web3 email: Send email to registered wallet without show the user's email.
+4. Receiver pool categorization: According user data and how many times they want to receive web3 email.
 
-DEMONSTRATION VIDEO: https://github.com/yedidromero/HERnewsletter/blob/main/VID_20230725_163352_085.mp4
+# Local installation
+Yarn install
+NPM: to check the list of users whose data we have stored.
+Web3mail is directly utilized in the iExec platform
 
-We created HER news, is a dApp where you can find trends, news, and monetization opportunities of your data, in a only one place.
 
-How does it work?
+# Deck:
+https://github.com/yedidromero/HERnewsletter/blob/main/VID_20230725_163352_085.mp4
 
-Wallet connection
+# Drive
+https://drive.google.com/file/d/1UkLsvvKhKmAV0tXJ3E1RNPTBZ2ES6mki/view?usp=sharing
 
-Sign Up (if you are interested): Is a process of Data recopilation, without revealing sensitive information like name, telephone number, nationality, etc. Here we
-
-Sign In: only with wallet, where is possible to see number of campaigns in which a user has participated, tokens, setting.
-
-Page principal: last edition HER Newsletter is principal, plus others editions.
-
-Partnership: page where the partners would shared his data.
-
-Next: Development the NFTs metadata for filter the audience for dApp. ****The technologies that we used for it´s possible that project with iExec are:
-
-DataProtector
-Web3Mail
-Receiver pool categorization
-Them, the user to win by shared data with protocolos (DeFi, DAOs for participate in governance, social media on web3 for content creation. The newsletter earns a percentage for the storage and safe of user data, and the protocol to win when receiving classified information that will be used for professional purposes.
-
-INSTALL
-
-To store user data, we have used Yarn. The variables we have added include categories, age, region, interests, in addition to the email and wallet required to link the data.
-
-Regarding the email tool, we used NPM to check the list of users whose data we have stored.
-
-Web3mail is directly utilized within the platform and will be the email service designed monthly to be sent through the platform developed by IEXEC, where users' email data is protected, and they will receive our newsletter.
-
-DRIVE: https://drive.google.com/file/d/1UkLsvvKhKmAV0tXJ3E1RNPTBZ2ES6mki/view?usp=sharing
+# Credits
+Thanks to our community for inspire us in the search for opportunities for them, opportunities of education, inclusion and data monetization.
+Thanks to iExec team for the opportunity to build a dApp without compromising users privacy and consent to share their data, for the guide and the incredible experience in Paris.
