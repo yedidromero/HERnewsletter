@@ -43,13 +43,13 @@ const SideMenu = () => {
       <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
         {/* Primer List en la parte superior */}
         <List style={{ flexGrow: 0, flexShrink: 0 }}>
-          <ListItem button component={RouterLink} to="/recordeddata">
+          <ListItem button component={RouterLink} to="">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
             </svg>
             <ListItemText primary="Entries" />
           </ListItem>
-          <ListItem button component={RouterLink} to="/recordeddata">
+          <ListItem button component={RouterLink} to="">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
             </svg>
@@ -59,13 +59,13 @@ const SideMenu = () => {
 
         {/* Segundo List en la parte media */}
         <List style={{ flexGrow: 0, flexShrink: 0 }}>
-          <ListItem button component={RouterLink} to="/recordeddata">
+          <ListItem button component={RouterLink} to="">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
             </svg>
             <ListItemText primary="Tokens" />
           </ListItem>
-          <ListItem button component={RouterLink} to="/recordeddata">
+          <ListItem button component={RouterLink} to="">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
             </svg>
@@ -75,14 +75,14 @@ const SideMenu = () => {
 
         {/* Tercer List en la parte inferior */}
         <List>
-          <ListItem button component={RouterLink} to="/recordeddata">
+          <ListItem button component={RouterLink} to="">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
   <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
 </svg>
             <ListItemText primary="Profile" />
           </ListItem>
           {}
-          <ListItem button component={RouterLink} to="/recordeddata">
+          <ListItem button component={RouterLink} to="">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
             </svg>
