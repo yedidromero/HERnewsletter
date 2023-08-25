@@ -42,7 +42,7 @@ const SideMenu = () => {
     <Drawer variant="permanent" anchor="left">
       <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
         {/* Primer List en la parte superior */}
-        <List style={{ flexGrow: 1, flexShrink: 0 }}>
+        <List style={{ flexGrow: 0, flexShrink: 0 }}>
           <ListItem button component={RouterLink} to="/recordeddata">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
@@ -58,18 +58,18 @@ const SideMenu = () => {
         </List>
 
         {/* Segundo List en la parte media */}
-        <List style={{ flexGrow: 1, flexShrink: 0 }}>
+        <List style={{ flexGrow: 0, flexShrink: 0 }}>
           <ListItem button component={RouterLink} to="/recordeddata">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
             </svg>
-            <ListItemText primary="Settings" />
+            <ListItemText primary="Tokens" />
           </ListItem>
           <ListItem button component={RouterLink} to="/recordeddata">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
             </svg>
-            <ListItemText primary="Profle" />
+            <ListItemText primary="Settings" />
           </ListItem>
         </List>
 
@@ -79,18 +79,19 @@ const SideMenu = () => {
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
   <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
 </svg>
-            <ListItemText primary="Support" />
+            <ListItemText primary="Profile" />
           </ListItem>
+          {}
           <ListItem button component={RouterLink} to="/recordeddata">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style={iconStyle}>
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
             </svg>
-            <ListItemText primary="Log Out" />
+            <ListItemText primary="Support" />
           </ListItem>
         </List>
 
         {/* Logo en la parte inferior */}
-        <List>
+        <List style={{ flexGrow: 1, flexShrink: 0, marginTop:'20vh' }}>
           <ListItem button component={RouterLink} to="/">
             <img src="https://substackcdn.com/image/fetch/w_224,h_224,c_fill,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda95c68e-65aa-496d-bc5d-605dafe241b9_4168x4168.jpeg" alt="Logo" style={{ width: '100px', height: '100px', marginRight: '8px' }} />
             <ListItemText primary="" />
@@ -257,6 +258,8 @@ export default function Front() {
             <Toolbar sx={{ justifyContent: 'space-between' }}>
               {/* Side menu */}
               <SideMenu />
+              
+              <h3 id="colortituloP" ><a href="https://web3mail.iex.ec/protectedData" target="_blank">Protocols</a> </h3>
 
               <Typography
                 sx={{
