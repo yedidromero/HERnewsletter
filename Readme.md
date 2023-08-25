@@ -13,13 +13,12 @@ HER NEWS is a dApp where our users can find trends, news about blockchain and we
 Yarn install
 NPM: to check the list of users whose data we have stored.
 Web3mail is directly utilized in the iExec platform
+The project is run using `yarn start`.
 
 
 # Deck:
-https://github.com/yedidromero/HERnewsletter/blob/main/VID_20230725_163352_085.mp4
+https://github.com/yedidromero/HERnewsletter/blob/main/Final.mp4
 
-# Drive
-https://drive.google.com/file/d/1UkLsvvKhKmAV0tXJ3E1RNPTBZ2ES6mki/view?usp=sharing
 
 # Credits
 Thanks to our community for inspire us in the search for opportunities for them, opportunities of education, inclusion and data monetization.
