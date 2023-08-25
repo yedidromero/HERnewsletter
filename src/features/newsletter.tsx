@@ -234,7 +234,8 @@ export default function Front() {
             <Toolbar sx={{ justifyContent: 'space-between' }}>
               {/* Side menu */}
               <SideMenu />
-              <h3 id="colortituloP" ><a href="https://web3mail.iex.ec/protectedData" target="_blank">Protocols</a> </h3>
+              <a href="https://web3mail.iex.ec/protectedData" target="_blank">
+              <h3 id="colortituloP" >Protocols </h3></a>
               
               <Typography
                 sx={{
