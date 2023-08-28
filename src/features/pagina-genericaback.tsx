@@ -268,45 +268,41 @@ export default function Front() {
 
          <h2 id="colortitulo2" >Please select the category you are interested in </h2>
       {/* Nueva sección con 3 columnas */}
-      <div id='newsletter' style={{  justifyContent: 'space-between', margin: '20px 70px',display: 'flow-root' }}>
-        
-          
-
-        <div className="col">
-      {/* Primera fila de botones */}
-      <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'space-between', width: '88%', marginLeft:'6%' }}>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
+      <div id='newsletter' style={{ display: 'flex', justifyContent: 'space-between', margin: '20px 70px' }}>
+        <div id='newsletter2' style={{ flex: 1, marginRight: '20px' }}>
+          <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>Categories</Typography>
+          <Typography variant="body2" sx={{ fontSize: '1rem',fontWeight: '400',color: '#737373',fontFamily: 'sans-serif' }}>Receive new entries directly to your inbox</Typography>
+          <Button id="btn-color-newsletter2"  component={RouterLink} to="/formulario" variant="contained" color="primary">
           Development
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
+          </Button>
+          <Button id="btn-color-newsletter2"  component={RouterLink} to="/formulario" variant="contained" color="primary">
           Marketing
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
+          </Button>
+          <Button id="btn-color-newsletter2"  component={RouterLink} to="/formulario" variant="contained" color="primary">
           Human Talent
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Infraestructure
-        </Button>
-      </div>
-      {/* Segunda fila de botones */}
-      <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'space-between', width: '76%', marginLeft:'11%' }}>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
+          </Button>
+          <Button id="btn-color-newsletter2"  component={RouterLink} to="/formulario" variant="contained" color="primary">
+          infraestructure
+          </Button>
+          
+          
+        </div>
+        <div  style={{ marginRight: '20px' }}>
+
+        <Button id="btn-color-newsletter2"  component={RouterLink} to="/formulario" variant="contained" color="primary">
           Freelance
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
+          </Button>
+          <Button id="btn-color-newsletter2"  component={RouterLink} to="/formulario" variant="contained" color="primary">
           Finance
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Founder
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Invest
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Legal
-        </Button>
-      </div>
-    </div>
+          </Button>
+        </div>
+      
+        <div id='newsletter2' >
+          <Button id="btn-color-newsletter" component={RouterLink} to="/formulario" variant="contained" color="primary">
+            Subscribe
+          </Button>
+        </div>
+      
       </div>
       {/* seccion entries */}
               
