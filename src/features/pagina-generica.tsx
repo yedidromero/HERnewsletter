@@ -24,6 +24,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  Grid,
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import {
@@ -268,46 +269,47 @@ export default function Front() {
 
          <h2 id="colortitulo2" >Please select the category you are interested in </h2>
       {/* Nueva sección con 3 columnas */}
-      <div id='newsletter' style={{  justifyContent: 'space-between', margin: '20px 70px',display: 'flow-root' }}>
-        
-          
+{/* Nueva sección con 2 filas */}
+<div id='newsletter' style={{ paddingBottom:'25px',paddingTop:'10px', width: '83%', marginLeft: '10%' }} >
+  
+ 
+   <p style={{marginLeft:'2%'}} >
+   <Typography variant="body1" sx={{ fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>Categories</Typography>
+   </p>
+  
+  <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '20px' }}>
+    <Button id="btn-color-newsletter2" component={RouterLink} to="/formulario" variant="contained" color="primary">
+      Development
+    </Button>
+    <Button id="btn-color-newsletter2" component={RouterLink} to="/formulario" variant="contained" color="primary">
+      Marketing
+    </Button>
+    <Button id="btn-color-newsletter2" component={RouterLink} to="/formulario" variant="contained" color="primary">
+      Human Talent
+    </Button>
+    <Button id="btn-color-newsletter2" component={RouterLink} to="/formulario" variant="contained" color="primary">
+      Infraestructure
+    </Button>
+  </div>
+  <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+    <Button id="btn-color-newsletter2" component={RouterLink} to="/formulario" variant="contained" color="primary">
+      Freelance
+    </Button>
+    <Button id="btn-color-newsletter2" component={RouterLink} to="/formulario" variant="contained" color="primary">
+      Finance
+    </Button>
+    <Button id="btn-color-newsletter2" component={RouterLink} to="/formulario" variant="contained" color="primary">
+      Founder
+    </Button>
+    <Button id="btn-color-newsletter2" component={RouterLink} to="/formulario" variant="contained" color="primary">
+      Invest
+    </Button>
+    <Button id="btn-color-newsletter2" component={RouterLink} to="/formulario" variant="contained" color="primary">
+      Legal
+    </Button>
+  </div>
+</div>
 
-        <div className="col">
-      {/* Primera fila de botones */}
-      <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'space-between', width: '88%', marginLeft:'6%' }}>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Development
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Marketing
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Human Talent
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Infraestructure
-        </Button>
-      </div>
-      {/* Segunda fila de botones */}
-      <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'space-between', width: '76%', marginLeft:'11%' }}>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Freelance
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Finance
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Founder
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Invest
-        </Button>
-        <Button variant="contained" id="btn-color" component={RouterLink} to="/formulario" style={{ backgroundColor: '#DBDBEF', borderRadius: '20px', color: '#DA077C' }}>
-          Legal
-        </Button>
-      </div>
-    </div>
-      </div>
       {/* seccion entries */}
               
        
@@ -316,16 +318,75 @@ export default function Front() {
 </div>
 
 <h2 id="colortitulo2" >Send web3 email </h2>
-<div  id='entries' style={{ display: 'flex', justifyContent: 'space-between', margin: '20px 70px' }}>
-        <div style={{ flex: 1, marginRight: '20px',textAlign: 'center' }}>
-        <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>Send to:</Typography>
-        <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>Subject</Typography>
-        <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>Message (includes Call to Action)</Typography>
-     
-        </div>
-       </div>           
-       
-       <div></div>
+
+       <Grid id='entries' container spacing={2} sx={{ paddingBottom:'26px', width: '83%', marginLeft: '10%' }}  >
+  {/* Primera fila */}
+  <Grid item xs={12} sm={4}>
+    {/* Primera columna */}
+    <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.8rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>Send to:</Typography>
+  </Grid>
+  <Grid item xs={12} sm={4}>
+    {/* Segunda columna */}
+    <TextField sx={{ background: '#B8B8DF', color: 'white'}}
+      variant="outlined"
+      placeholder="Enter email"
+      fullWidth
+      // Agrega aquí las props necesarias para manejar el estado del TextField
+    />
+  </Grid>
+  <Grid item xs={12} sm={4}>
+    {/* Tercera columna */}
+    <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>9 select</Typography>
+  </Grid>
+
+  {/* Segunda fila */}
+  <Grid item xs={12} sm={4}>
+    {/* Primera columna */}
+    <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>Subject:</Typography>
+  </Grid>
+  <Grid item xs={12} sm={4}>
+    {/* Segunda columna */}
+    <TextField sx={{ background: '#B8B8DF', color: 'white'}}
+      variant="outlined"
+      placeholder="Message subject"
+      fullWidth
+      // Agrega aquí las props necesarias para manejar el estado del TextField
+    />
+  </Grid>
+  <Grid item xs={12} sm={4}>
+    {/* Tercera columna */}
+    {/* Deja este espacio en blanco si no deseas mostrar un texto */}
+  </Grid>
+
+  {/* Tercera fila */}
+  <Grid item xs={12} sm={12}>
+    {/* Primera columna */}
+    <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>Message (includes Call to Action):</Typography>
+  </Grid>
+  <Grid item xs={12} sm={12}>
+    {/* Segunda columna */}
+    {/* Deja este espacio en blanco si no deseas mostrar un texto */}
+  </Grid>
+
+  {/* Cuarta fila */}
+  <Grid item xs={12} sm={12}  >
+    {/* Primera columna */}
+    <TextField sx={{ width:'90% !important', background: '#B8B8DF', color: 'white'}} 
+      variant="outlined"
+      placeholder="Enter subject"
+      fullWidth
+      multiline
+      rows={5}
+      cols={40}
+      // Agrega aquí las props necesarias para manejar el estado del TextField
+    />
+  </Grid>
+</Grid>
+    <Button id="btn-color-newsletter2" component={RouterLink} to="/formulario" variant="contained" color="primary" sx={{ width:'14%',marginTop:'2%', background:'#EC83BD!important', marginLeft: '11%'}} >
+      Send
+    </Button>
+
+
 
 
     </>
