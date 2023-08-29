@@ -56,14 +56,17 @@
   color: #DA077C !important;
   font-family: sans-serif;
   margin-left: 48%;
-  text-decoration: none !important; 
+  
 }
 
 #colortituloP{
   color: #DA077C !important;
   font-family: sans-serif;
   margin-left: 700%;
-  text-decoration: none !important;
+ 
+}
+a:link, a:visited, a:active {
+  text-decoration:none;
 }
 
 .MuiBox-root .css-1kuevwo{
@@ -125,7 +128,8 @@
 #colortitulo2{
   color: #DA077C !important;
   font-family: sans-serif;
-  margin-left: 28%;
+  margin-left: 12%;
+  font-size: 1.8em;
 }
 
 #head6{
@@ -133,4 +137,47 @@
   font-family: sans-serif;
   font-size: larger;
   
+}
+
+#btn-color-newsletter2{
+  border-radius: 20px;
+  text-transform: inherit;
+  font-weight: bold;
+  color:white;
+  background: #B8B8DF;
+  font-size: 18px;
+  width: 16%;
+  font-family: sans-serif;
+}
+
+#btn-color-newsletter2:hover{
+  color: white !important;
+  background: #EC83BD!important;
+}
+
+.css-ispfl3-MuiInputBase-root-MuiOutlinedInput-root{
+  color:white !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
+  font-family: sans-serif !important;
+  border-radius: 26px !important;
+  border: 0px solid transparent !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  color:white !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
+  font-family: sans-serif !important;
+  border-radius: 26px !important;
+  border: 0px solid transparent !important;
+}
+
+.css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input {
+  color:white !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
+  font-family: sans-serif !important;
+  border-radius: 26px !important;
+  border: 0px solid transparent !important;
 }
