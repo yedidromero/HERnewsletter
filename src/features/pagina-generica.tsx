@@ -329,14 +329,14 @@ export default function Front() {
     {/* Segunda columna */}
     <TextField sx={{ background: '#B8B8DF', color: 'white'}}
       variant="outlined"
-      placeholder="Enter email"
+      placeholder="Enter wallet"
       fullWidth
       // Agrega aquí las props necesarias para manejar el estado del TextField
     />
   </Grid>
   <Grid item xs={12} sm={4}>
     {/* Tercera columna */}
-    <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>9 select</Typography>
+    <Typography variant="body1" sx={{ mt: 1 , fontSize: '1.6rem',fontWeight: '600', fontFamily: 'sans-serif', color: '#737373' }}>9 results</Typography>
   </Grid>
 
   {/* Segunda fila */}

@@ -105,8 +105,11 @@ return (
           style={{ width: '100px', height: '100px', marginRight: '8px' }}
           className="mr-auto"
         />
-         <a href="https://web3mail.iex.ec/protectedData" target="_blank">
-          <h3 id="colortitulo" >Protocols </h3></a>
+        
+          
+          <h3 id="colortitulo">
+  <RouterLink to="/pagina-generica">Protocols</RouterLink>
+</h3>
 
         {/* Contenido del menú en el lado derecho */}
         {isConnected ? (
