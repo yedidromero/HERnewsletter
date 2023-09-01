@@ -21,13 +21,14 @@ For example: Student, Development, Searching for a full time job, from Latam, an
 
 # Install (responder las preguntas entre paréntesis y completar este apartado)
 1. Enter the dapp directory
-2. NPM install (es la única dependencia??)
-3. Configure your environment (está correcto??)
+2. NPM install 
+2.1 YARN install
+3. Configure your environment 
 - Rename the `.env.example` file to `.env`.
    - Fill in the environment variables in the `.env` file
 4. Build and deploy the smart contracts (se usó truffle o cuál??)
-5. Start the UI: `npm start`
-6. Open your browser and navigate to `http://localhost:3000` to view and use the dApp.
+5. Start the UI: `yarn start`
+6. Open your browser and navigate to `http://localhost:5173` to view and use the dApp.
 
 
 # Deck:
