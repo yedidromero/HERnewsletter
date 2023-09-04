@@ -181,3 +181,7 @@ a:link, a:visited, a:active {
   border-radius: 26px !important;
   border: 0px solid transparent !important;
 }
+.css-ygr19q-MuiFormControl-root-MuiTextField-root {
+  border-radius: 50px
+}
+  
