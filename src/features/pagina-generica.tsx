@@ -25,6 +25,8 @@ import {
   ListItem,
   ListItemText,
   Grid,
+ 
+
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import {
@@ -167,7 +169,10 @@ export default function Front() {
   const authorizedUserChange = (event: any) => {
     setAuthorizedUser(event.target.value);
   };
-
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+  const [selectedOption, setSelectedOption] = useState(<em>Select an option</em>);
  
   //wallet address shortening
   const shortAddress = (address: string) => {
@@ -327,12 +332,23 @@ export default function Front() {
   </Grid>
   <Grid item xs={12} sm={4}>
     {/* Segunda columna */}
-    <TextField sx={{ background: '#B8B8DF', color: 'white'}}
-      variant="outlined"
-      placeholder="Enter wallet"
-      fullWidth
-      // Agrega aquí las props necesarias para manejar el estado del TextField
-    />
+    
+    <Select
+        sx={{ background: '#B8B8DF', color: 'white' }}
+        variant="outlined"
+        fullWidth
+        value={selectedOption}
+        onChange={handleOptionChange}
+      >
+   <MenuItem value="Select an option">
+          <em>Select an option</em>
+        </MenuItem>
+        <MenuItem value="option1">Option 1</MenuItem>
+        <MenuItem value="option2">Option 2</MenuItem>
+        <MenuItem value="option3">Option 3</MenuItem>
+        {/* Agrega más elementos MenuItem según tus necesidades */}
+      </Select>
+ 
   </Grid>
   <Grid item xs={12} sm={4}>
     {/* Tercera columna */}
